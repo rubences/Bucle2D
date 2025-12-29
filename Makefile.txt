@@ -1,0 +1,97 @@
+.PHONY: help install install-dev test clean validate lint format run
+
+help:
+	@echo "Agentic-Racing-Vision Project - Available Commands"
+	@echo ""
+	@echo "Usage:"
+	@echo "  make install      - Install production dependencies"
+	@echo "  make install-dev  - Install development dependencies"
+	@echo "  make validate     - Validate project structure"
+	@echo "  make test         - Run inference pipeline test"
+	@echo "  make lint         - Run linters (flake8)"
+	@echo "  make format       - Format code with black"
+	@echo "  make clean        - Clean generated files"
+	@echo "  make run          - Run complete lap simulation"
+	@echo "  make help         - Show this help message"
+
+install:
+	@echo "Installing production dependencies..."
+	pip install -r requirements.txt
+
+install-dev: install
+	@echo "Installing development dependencies..."
+	pip install black flake8 mypy pytest pytest-cov
+
+validate:
+	@echo "Validating project structure..."
+	python validate_structure.py
+
+test: validate
+	@echo "Testing individual modules..."
+	cd src && python agent_orchestrator.py
+	cd src && python memory_systems.py
+	cd src && python vision_encoder.py
+
+lint:
+	@echo "Running linters..."
+	flake8 src/ --max-line-length=100 --exclude=__pycache__
+
+format:
+	@echo "Formatting code with black..."
+	black src/ --line-length=100
+
+clean:
+	@echo "Cleaning generated files..."
+	find . -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true
+	find . -type f -name "*.pyc" -delete
+	find . -type d -name "*.egg-info" -exec rm -rf {} + 2>/dev/null || true
+	rm -f lap_results.json
+	rm -f .coverage
+	rm -rf htmlcov/
+	@echo "Cleaned!"
+
+run: install
+	@echo "Running complete lap simulation..."
+	cd src && python main_inference.py
+	@echo "✓ Lap simulation complete! Check lap_results.json for details."
+
+.PHONY: docs
+docs:
+	@echo "Generating documentation..."
+	@echo "LaTeX compilation (manual): pdflatex paper/main.tex"
+	@echo "Documentation files: README.md, STRUCTURE.md, TESTING.md"
+
+.PHONY: version
+version:
+	@echo "Agentic-Racing-Vision v0.1.0"
+
+.PHONY: info
+info:
+	@echo ""
+	@echo "╔════════════════════════════════════════════════════════════════╗"
+	@echo "║   Agentic-Racing-Vision: Hybrid RAG-CAG Architecture          ║"
+	@echo "║   High-Performance Motorsport Perception System               ║"
+	@echo "╚════════════════════════════════════════════════════════════════╝"
+	@echo ""
+	@echo "Project Structure:"
+	@echo "  • paper/          - LaTeX manuscript for J. Imaging submission"
+	@echo "  • src/            - Python implementation (1498 lines)"
+	@echo "  • data/           - Circuit configuration and static data"
+	@echo ""
+	@echo "Key Components:"
+	@echo "  • agent_orchestrator.py  - ReAct agent (342 lines)"
+	@echo "  • memory_systems.py      - CAG & RAG memory (464 lines)"
+	@echo "  • vision_encoder.py      - NestedUNet encoder (343 lines)"
+	@echo "  • main_inference.py      - Inference pipeline (330 lines)"
+	@echo ""
+	@echo "Key Features:"
+	@echo "  ✓ 48% latency reduction vs RAG-only"
+	@echo "  ✓ Confidence-driven tool selection"
+	@echo "  ✓ Multi-scale vision encoder"
+	@echo "  ✓ Real-time performance (<50ms decisions)"
+	@echo ""
+	@echo "Quick Start:"
+	@echo "  make install  # Install dependencies"
+	@echo "  make run      # Run lap simulation"
+	@echo "  make validate # Validate structure"
+	@echo ""

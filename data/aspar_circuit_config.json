@@ -1,0 +1,120 @@
+{
+  "circuit_metadata": {
+    "name": "Aspar Circuit",
+    "location": "Spain",
+    "track_length_km": 3.2,
+    "direction": "counterclockwise",
+    "surface": "asphalt",
+    "banking_regions": ["Turn_4_Banking", "Turn_8_Banking"]
+  },
+  "sectors": [
+    {
+      "id": "Sector_1",
+      "name": "Straight_Main",
+      "start_km": 0.0,
+      "end_km": 0.45,
+      "avg_speed_kmh": 240,
+      "vehicle_type": "motorcycle",
+      "coordinates": [40.3827, -3.5891],
+      "banking_degrees": 0.0
+    },
+    {
+      "id": "Sector_2",
+      "name": "Turn_1_Braking",
+      "start_km": 0.45,
+      "end_km": 0.65,
+      "avg_speed_kmh": 95,
+      "braking_intensity": "hard",
+      "coordinates": [40.3835, -3.5920],
+      "banking_degrees": 2.5
+    },
+    {
+      "id": "Sector_3",
+      "name": "Turn_2_Apex",
+      "start_km": 0.65,
+      "end_km": 0.88,
+      "avg_speed_kmh": 120,
+      "lean_angle_max": 62.3,
+      "coordinates": [40.3842, -3.5950],
+      "banking_degrees": 0.0
+    },
+    {
+      "id": "Sector_4",
+      "name": "Turn_4_Banking",
+      "start_km": 1.20,
+      "end_km": 1.45,
+      "avg_speed_kmh": 210,
+      "banking_degrees": 15.0,
+      "coordinates": [40.3850, -3.5870],
+      "critical_for_performance": true
+    },
+    {
+      "id": "Sector_5",
+      "name": "Straight_Secondary",
+      "start_km": 1.45,
+      "end_km": 1.92,
+      "avg_speed_kmh": 230,
+      "acceleration_profile": "full_throttle",
+      "coordinates": [40.3858, -3.5840],
+      "banking_degrees": 0.0
+    },
+    {
+      "id": "Sector_6",
+      "name": "Turn_6_Tight",
+      "start_km": 1.92,
+      "end_km": 2.15,
+      "avg_speed_kmh": 85,
+      "lean_angle_max": 65.0,
+      "coordinates": [40.3865, -3.5810],
+      "banking_degrees": -2.0
+    },
+    {
+      "id": "Sector_7",
+      "name": "Turn_8_Banking",
+      "start_km": 2.50,
+      "end_km": 2.85,
+      "avg_speed_kmh": 190,
+      "banking_degrees": 12.5,
+      "coordinates": [40.3872, -3.5880],
+      "critical_for_performance": true
+    },
+    {
+      "id": "Sector_8",
+      "name": "Final_Straight",
+      "start_km": 2.85,
+      "end_km": 3.2,
+      "avg_speed_kmh": 260,
+      "acceleration_profile": "full_throttle",
+      "drs_zone": true,
+      "coordinates": [40.3880, -3.5900],
+      "banking_degrees": 0.0
+    }
+  ],
+  "static_hazards": [
+    {
+      "sector_id": "Sector_2",
+      "hazard_type": "gravel_trap",
+      "position": "exit_right",
+      "risk_level": "high"
+    },
+    {
+      "sector_id": "Sector_4",
+      "hazard_type": "curbing",
+      "position": "apex_left",
+      "risk_level": "medium"
+    },
+    {
+      "sector_id": "Sector_6",
+      "hazard_type": "wall_barrier",
+      "position": "entry",
+      "risk_level": "critical"
+    }
+  ],
+  "telemetry_benchmarks": {
+    "best_lap_time_s": 82.15,
+    "avg_corner_speed_kmh": 145,
+    "peak_acceleration_g": 1.8,
+    "peak_braking_g": 1.6,
+    "peak_lean_angle": 65.3
+  }
+}
