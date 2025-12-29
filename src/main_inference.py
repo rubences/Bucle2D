@@ -215,6 +215,11 @@ class RacingInferencePipeline:
                     braking_level = 0.6
                 elif braking_str == "light":
                     braking_level = 0.35
+
+                # Dynamic braking estimate if large speed drop vs previous frame
+                if prev_speed_kmh > 0:
+                    drop_ratio = max(0.0, prev_speed_kmh - sector_avg_speed) / max(prev_speed_kmh, 1e-3)
+                    braking_level = max(braking_level, min(1.0, drop_ratio * 1.2))
                 
                 context = {
                     "sector": sector_id,
