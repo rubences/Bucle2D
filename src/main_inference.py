@@ -172,6 +172,8 @@ class RacingInferencePipeline:
             print("RACING LAP SIMULATION - Aspar Circuit")
             print("=" * 70)
         
+        prev_speed_kmh = self.sectors[0]["avg_speed_kmh"] * 0.7 if self.sectors else 150.0
+        
         # Process each sector
         for sector_idx in range(num_sectors_per_lap):
             sector = self.sectors[sector_idx]
@@ -205,6 +207,15 @@ class RacingInferencePipeline:
                     visual_embedding = visual_embedding.cpu().numpy()
                 
                 # Agent reasoning and decision
+                braking_str = sector.get("braking_intensity")
+                braking_level = 0.0
+                if braking_str == "hard":
+                    braking_level = 1.0
+                elif braking_str == "medium":
+                    braking_level = 0.6
+                elif braking_str == "light":
+                    braking_level = 0.35
+                
                 context = {
                     "sector": sector_id,
                     "frame": frame_num,
@@ -212,6 +223,7 @@ class RacingInferencePipeline:
                     "sector_difficulty": self.sector_difficulties[sector_idx],
                     "banking_degrees": sector.get("banking_degrees", 0.0),
                     "lean_angle_max": sector.get("lean_angle_max", sector.get("avg_lean_angle", 35.0)),
+                    "braking_intensity": braking_level,
                 }
                 
                 decision = self.agent.step(visual_embedding[0], context=context)
@@ -227,13 +239,33 @@ class RacingInferencePipeline:
                 braking_force = float(decision_payload.get("braking_force", 0.0))
                 lean_angle = float(decision_payload.get("lean_angle", decision_payload.get("lean_angle_max", 25)))
 
-                base_speed = sector_avg_speed
-                if braking_force > 0:
-                    base_speed *= max(0.55, 1.0 - 0.5 * braking_force)
-                speed_kmh = base_speed * (0.8 + 0.25 * throttle)
-                speed_kmh += np.random.normal(0, 3.0)
-                speed_kmh = float(np.clip(speed_kmh, 30.0, 330.0))
-                
+                acceleration_profile = sector.get("acceleration_profile", "balanced")
+                drs_bonus = 12.0 if sector.get("drs_zone", False) and throttle > 0.8 else 0.0
+
+                # Base target speed using sector avg, throttle, and braking
+                target_speed = sector_avg_speed * (0.70 + 0.28 * throttle)
+                target_speed *= (1.0 - 0.55 * max(braking_level, braking_force))
+
+                # Adjust for profile
+                if acceleration_profile == "full_throttle":
+                    target_speed *= 1.05
+                elif acceleration_profile == "conservative":
+                    target_speed *= 0.95
+
+                target_speed += drs_bonus
+                target_speed = float(np.clip(target_speed, 25.0, 340.0))
+
+                # Smooth transition from previous frame to avoid jumps
+                smoothing = 0.35 + 0.35 * max(braking_level, braking_force)
+                if acceleration_profile == "full_throttle" and braking_level < 0.2:
+                    smoothing = max(0.25, smoothing - 0.12)
+                smoothing = float(np.clip(smoothing, 0.25, 0.75))
+
+                speed_kmh = prev_speed_kmh + smoothing * (target_speed - prev_speed_kmh)
+                speed_kmh += np.random.normal(0, 1.8 + 1.2 * self.sector_difficulties[sector_idx])
+                speed_kmh = float(np.clip(speed_kmh, 20.0, 340.0))
+                prev_speed_kmh = speed_kmh
+
                 telemetry = {
                     "frame": frame_num,
                     "timestamp": sim_time_s,

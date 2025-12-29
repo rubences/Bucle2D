@@ -101,8 +101,9 @@ class RacingAgent:
         }
         
         # PHASE 2: ACT
-        # Decide which tool to use based on confidence
-        selected_tool = self._select_tool(confidence_score)
+        # Decide which tool to use based on confidence and sector difficulty
+        difficulty = context.get("sector_difficulty", 0.0) if context else 0.0
+        selected_tool = self._select_tool(confidence_score, difficulty)
         
         action = {
             "tool": selected_tool,
@@ -196,7 +197,13 @@ class RacingAgent:
             difficulty = context.get("sector_difficulty", 0.0)
             banking = float(context.get("banking_degrees", 0.0))
             lean_max = float(context.get("lean_angle_max", 0.0))
-            difficulty_penalty = 0.35 * difficulty + 0.002 * max(banking - 8.0, 0.0) + 0.001 * max(lean_max - 45.0, 0.0)
+            braking_intensity = context.get("braking_intensity", 0.0)
+            difficulty_penalty = (
+                0.45 * difficulty
+                + 0.004 * max(banking - 6.0, 0.0)
+                + 0.002 * max(lean_max - 42.0, 0.0)
+                + 0.25 * braking_intensity
+            )
             base_confidence = max(0.0, base_confidence - difficulty_penalty)
 
         # Historical consistency: check recent decisions
@@ -212,7 +219,7 @@ class RacingAgent:
 
         return base_confidence
     
-    def _select_tool(self, confidence: float) -> ToolType:
+    def _select_tool(self, confidence: float, difficulty: float = 0.0) -> ToolType:
         """
         Select tool based on confidence threshold.
         
@@ -221,14 +228,23 @@ class RacingAgent:
         
         Args:
             confidence: Confidence score [0, 1]
+            difficulty: Sector difficulty [0, 1]
             
         Returns:
             Selected ToolType
         """
-        if confidence >= self.confidence_threshold:
-            return ToolType.CAG
-        else:
+        difficulty = np.clip(difficulty, 0.0, 1.0)
+        threshold = min(0.98, self.confidence_threshold + 0.12 * difficulty)
+        margin = 0.06 + 0.12 * difficulty
+        
+        # Exploration band: if confidence in [threshold, threshold+margin), sometimes use RAG
+        if confidence < threshold:
             return ToolType.RAG
+        if confidence < threshold + margin:
+            p_rag = min(0.8, 0.30 + 0.6 * difficulty)
+            if np.random.rand() < p_rag:
+                return ToolType.RAG
+        return ToolType.CAG
     
     def tool_cag(self, embedding: np.ndarray, 
                 context: Optional[Dict] = None) -> Dict[str, Any]:
