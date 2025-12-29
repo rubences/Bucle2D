@@ -96,6 +96,7 @@ Salidas generadas:
 Notas:
 - Por defecto usa CPU. Si tienes GPU disponible, puedes editar `device="cuda"` en [src/main_inference.py](src/main_inference.py) o en el script de ejemplo para acelerar.
 - Puedes ajustar el número de frames por sector editando `frames_per_sector` en [scripts/run_example_with_plots.py](scripts/run_example_with_plots.py).
+  - El simulador ahora usa longitudes de tramo, banking y dificultad del circuito Aspar para estimar tiempos y mezclar CAG/RAG de forma más realista.
 
 ### Project Structure
 

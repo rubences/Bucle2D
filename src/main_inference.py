@@ -73,8 +73,36 @@ class RacingInferencePipeline:
         
         self.sectors = self.circuit_config.get("sectors", [])
         self.num_sectors = len(self.sectors)
+        self.sector_lengths_km = self._compute_sector_lengths()
+        self.sector_difficulties = self._compute_sector_difficulties()
         
         print(f"\n✓ System initialized. Circuit has {self.num_sectors} sectors.")
+
+    def _compute_sector_lengths(self) -> List[float]:
+        lengths = []
+        for s in self.sectors:
+            start = s.get("start_km")
+            end = s.get("end_km")
+            if start is not None and end is not None:
+                lengths.append(max(0.01, float(end) - float(start)))
+            else:
+                lengths.append(0.0)
+        # Fill missing lengths evenly if any are zero
+        if any(l == 0.0 for l in lengths) and len(lengths) > 0:
+            default_len = self.circuit_config.get("circuit_metadata", {}).get("track_length_km", 3.2) / max(len(lengths), 1)
+            lengths = [l if l > 0 else default_len for l in lengths]
+        return lengths
+
+    def _compute_sector_difficulties(self) -> List[float]:
+        difficulties = []
+        for s in self.sectors:
+            banking = float(s.get("banking_degrees", 0.0))
+            critical = 1.0 if s.get("critical_for_performance", False) else 0.0
+            lean_max = float(s.get("lean_angle_max", s.get("avg_lean_angle", 35.0)))
+            braking = 0.6 if s.get("braking_intensity") == "hard" else 0.25 if s.get("braking_intensity") else 0.0
+            difficulty = min(1.0, 0.15 * critical + 0.01 * max(banking, 0) + 0.01 * max(lean_max - 40.0, 0) + braking)
+            difficulties.append(difficulty)
+        return difficulties
     
     def simulate_frame(self, sector_idx: int, frame_num: int) -> torch.Tensor:
         """
@@ -91,18 +119,21 @@ class RacingInferencePipeline:
         """
         # Create frame with sector-specific characteristics
         frame = torch.randn(1, 3, 512, 512)
+        sector = self.sectors[sector_idx]
         
         # Encode sector information into frame
-        sector_speed = self.sectors[sector_idx]["avg_speed_kmh"]
-        sector_lean = self.sectors[sector_idx].get("avg_lean_angle", 20)
+        sector_speed = sector["avg_speed_kmh"]
+        sector_lean = sector.get("avg_lean_angle", sector.get("lean_angle_max", 30))
+        banking = sector.get("banking_degrees", 0.0)
+        difficulty = self.sector_difficulties[sector_idx]
         
-        # Modulate frame features based on sector
-        frame[:, 0, :, :] *= (sector_speed / 300.0)  # Speed in red channel
-        frame[:, 1, :, :] *= (sector_lean / 65.0)    # Lean angle in green channel
-        frame[:, 2, :, :] *= 0.5  # Base blue channel
+        frame[:, 0, :, :] *= (sector_speed / 320.0)  # Speed in red channel
+        frame[:, 1, :, :] *= (sector_lean / 70.0)    # Lean angle in green channel
+        frame[:, 2, :, :] *= max(0.4, 1.0 - difficulty)  # Harder sectors slightly darker
         
-        # Add temporal variation (frames differ within a sector)
-        frame += torch.randn_like(frame) * 0.1
+        # Add temporal variation and slight blur for high banking turns
+        variability = 0.08 + 0.02 * difficulty + 0.01 * (banking / 10.0)
+        frame += torch.randn_like(frame) * variability
         
         return frame
     
@@ -133,7 +164,7 @@ class RacingInferencePipeline:
             "performance_metrics": {}
         }
         
-        total_lap_time_ms = 0
+        sim_time_s = 0.0
         sector_times = []
         
         if verbose:
@@ -152,7 +183,11 @@ class RacingInferencePipeline:
                 print(f"  Speed: {sector['avg_speed_kmh']} km/h | "
                       f"Banking: {sector.get('banking_degrees', 0)}°")
             
-            sector_start_time = time.time()
+            sector_length_km = self.sector_lengths_km[sector_idx]
+            sector_avg_speed = sector["avg_speed_kmh"]
+            sector_time_s = (sector_length_km / max(sector_avg_speed, 1e-3)) * 3600.0
+            dt_frame = sector_time_s / frames_per_sector
+            sector_times.append(sector_time_s)
             sector_telemetry = []
             sector_decisions = []
             
@@ -173,7 +208,10 @@ class RacingInferencePipeline:
                 context = {
                     "sector": sector_id,
                     "frame": frame_num,
-                    "lap_progress": sector_idx / num_sectors_per_lap
+                    "lap_progress": sector_idx / num_sectors_per_lap,
+                    "sector_difficulty": self.sector_difficulties[sector_idx],
+                    "banking_degrees": sector.get("banking_degrees", 0.0),
+                    "lean_angle_max": sector.get("lean_angle_max", sector.get("avg_lean_angle", 35.0)),
                 }
                 
                 decision = self.agent.step(visual_embedding[0], context=context)
@@ -183,14 +221,22 @@ class RacingInferencePipeline:
                 tool_used = decision["phase_2_action"]["tool"]
                 decision_time = decision["phase_3_observation"]["processing_time_ms"]
                 
-                # Simulate telemetry output
-                throttle = decision["phase_3_observation"]["decision"].get("throttle", 0.5)
-                lean_angle = decision["phase_3_observation"]["decision"].get("lean_angle", 20)
-                speed_kmh = sector["avg_speed_kmh"] * (0.8 + throttle * 0.4)
+                # Simulate telemetry output with physics-informed profile
+                decision_payload = decision["phase_3_observation"]["decision"]
+                throttle = float(decision_payload.get("throttle", 0.6)) if "throttle" in decision_payload else float(decision_payload.get("throttle_position", 0.6))
+                braking_force = float(decision_payload.get("braking_force", 0.0))
+                lean_angle = float(decision_payload.get("lean_angle", decision_payload.get("lean_angle_max", 25)))
+
+                base_speed = sector_avg_speed
+                if braking_force > 0:
+                    base_speed *= max(0.55, 1.0 - 0.5 * braking_force)
+                speed_kmh = base_speed * (0.8 + 0.25 * throttle)
+                speed_kmh += np.random.normal(0, 3.0)
+                speed_kmh = float(np.clip(speed_kmh, 30.0, 330.0))
                 
                 telemetry = {
                     "frame": frame_num,
-                    "timestamp": frame_start_time,
+                    "timestamp": sim_time_s,
                     "speed_kmh": speed_kmh,
                     "lean_angle": lean_angle,
                     "throttle": throttle,
@@ -210,16 +256,13 @@ class RacingInferencePipeline:
                           f"Time={decision_time:5.1f}ms")
                 
                 lap_results["total_frames"] += 1
-            
-            sector_time = time.time() - sector_start_time
-            sector_times.append(sector_time)
-            total_lap_time_ms = sum(sector_times) * 1000
+                sim_time_s += dt_frame
             
             # Store sector results
             lap_results["sector_telemetry"].append({
                 "sector_id": sector_id,
                 "sector_name": sector_name,
-                "duration_s": sector_time,
+                "duration_s": sector_time_s,
                 "frames_processed": len(sector_telemetry),
                 "avg_speed_kmh": np.mean([t["speed_kmh"] for t in sector_telemetry]),
                 "telemetry": sector_telemetry
@@ -231,13 +274,13 @@ class RacingInferencePipeline:
                 print(f"  Summary: Avg Confidence={avg_conf:.3f} | CAG Usage={cag_ratio*100:.1f}%")
         
         # Compute lap statistics
-        total_lap_time_s = total_lap_time_ms / 1000
+        total_lap_time_s = float(np.sum(sector_times))
         
         agent_stats = self.agent.get_statistics()
         
         lap_results["performance_metrics"] = {
             "total_lap_time_s": total_lap_time_s,
-            "avg_frame_time_ms": (total_lap_time_ms / lap_results["total_frames"]),
+            "avg_frame_time_ms": (total_lap_time_s * 1000 / lap_results["total_frames"]),
             "fps": lap_results["total_frames"] / max(total_lap_time_s, 0.001),
             "cag_usage_percent": agent_stats["cag_usage_percent"],
             "rag_usage_percent": agent_stats["rag_usage_percent"],
@@ -250,9 +293,9 @@ class RacingInferencePipeline:
             print("\n" + "=" * 70)
             print("LAP COMPLETE - Performance Summary")
             print("=" * 70)
-            print(f"Total Lap Time: {total_lap_time_s:.2f}s")
+            print(f"Total Lap Time (simulado): {total_lap_time_s:.2f}s")
             print(f"Frames Processed: {lap_results['total_frames']}")
-            print(f"Average FPS: {lap_results['performance_metrics']['fps']:.1f}")
+            print(f"Average FPS (simulado): {lap_results['performance_metrics']['fps']:.1f}")
             print(f"CAG Usage (Cache Hits): {agent_stats['cag_usage_percent']:.1f}%")
             print(f"RAG Usage (Retrievals): {agent_stats['rag_usage_percent']:.1f}%")
             print(f"Average Decision Time: {agent_stats['avg_decision_time_ms']:.2f}ms")
