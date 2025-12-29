@@ -177,29 +177,40 @@ class RacingAgent:
         # Compute from embedding statistics
         embedding_var = np.var(embedding)
         embedding_entropy = -np.sum((embedding ** 2) * np.log(embedding ** 2 + 1e-8))
-        
+
         # Normalize entropy to [0, 1]
         max_entropy = self.embedding_dim * np.log(self.embedding_dim)
         normalized_entropy = embedding_entropy / max(max_entropy, 1e-8)
-        
+
         # Confidence inversely proportional to entropy
         base_confidence = 1.0 - (normalized_entropy / self.embedding_dim)
-        
-        # Context adjustment (if sector is known, boost confidence)
-        if context and "sector" in context:
-            self.state.current_sector = context["sector"]
-            # Known sectors have higher confidence
-            context_boost = 0.1 if context["sector"] in [f"Sector_{i}" for i in range(1, 9)] else 0.0
-            base_confidence = min(1.0, base_confidence + context_boost)
-        
+
+        # Context-aware adjustments
+        if context:
+            if "sector" in context:
+                self.state.current_sector = context["sector"]
+                # Known sectors have slightly higher confidence
+                context_boost = 0.05 if context["sector"] in [f"Sector_{i}" for i in range(1, 9)] else 0.0
+                base_confidence = min(1.0, base_confidence + context_boost)
+            # Penalize difficult sectors (banking, tight turns, critical zones)
+            difficulty = context.get("sector_difficulty", 0.0)
+            banking = float(context.get("banking_degrees", 0.0))
+            lean_max = float(context.get("lean_angle_max", 0.0))
+            difficulty_penalty = 0.35 * difficulty + 0.002 * max(banking - 8.0, 0.0) + 0.001 * max(lean_max - 45.0, 0.0)
+            base_confidence = max(0.0, base_confidence - difficulty_penalty)
+
         # Historical consistency: check recent decisions
         if len(self.decision_history) > 5:
             recent_confidences = [d["phase_1_reasoning"]["confidence"] 
                                  for d in self.decision_history[-5:]]
             consistency = 1.0 - np.std(recent_confidences)
             base_confidence = 0.7 * base_confidence + 0.3 * consistency
-        
-        return np.clip(base_confidence, 0.0, 1.0)
+
+        # Add small stochasticity to avoid degenerate 1.0 scores
+        noise = np.random.normal(0.0, 0.02)
+        base_confidence = np.clip(base_confidence + noise, 0.0, 1.0)
+
+        return base_confidence
     
     def _select_tool(self, confidence: float) -> ToolType:
         """

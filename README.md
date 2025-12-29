@@ -67,6 +67,36 @@ rag_system = RAGSystem()
 python src/main_inference.py
 ```
 
+### Ejemplo con Resultados y Gráficas
+
+Este repositorio incluye un script listo para ejecutar que corre una vuelta simulada completa en el circuito Aspar y genera:
+- Resultados en JSON con telemetría y métricas de rendimiento
+- Gráficas PNG de velocidad, confianza, uso de herramientas y tiempos de decisión
+
+Pasos:
+
+```bash
+# 1) Instalar dependencias
+pip install -r requirements.txt
+
+# 2) Ejecutar el ejemplo
+python3 scripts/run_example_with_plots.py
+```
+
+Salidas generadas:
+- Resultados: [results/lap_results.json](results/lap_results.json)
+- Gráficas: [results/plots](results/plots)
+  - [01_timeline_speed.png](results/plots/01_timeline_speed.png)
+  - [02_confidence_tool.png](results/plots/02_confidence_tool.png)
+  - [03_avg_speed_per_sector.png](results/plots/03_avg_speed_per_sector.png)
+  - [04_tool_usage_pie.png](results/plots/04_tool_usage_pie.png)
+  - [05_decision_time_hist.png](results/plots/05_decision_time_hist.png)
+  - [06_speed_vs_confidence.png](results/plots/06_speed_vs_confidence.png)
+
+Notas:
+- Por defecto usa CPU. Si tienes GPU disponible, puedes editar `device="cuda"` en [src/main_inference.py](src/main_inference.py) o en el script de ejemplo para acelerar.
+- Puedes ajustar el número de frames por sector editando `frames_per_sector` en [scripts/run_example_with_plots.py](scripts/run_example_with_plots.py).
+
 ### Project Structure
 
 ```
