@@ -96,10 +96,9 @@ Salidas generadas:
 Notas:
 - Por defecto usa CPU. Si tienes GPU disponible, puedes editar `device="cuda"` en [src/main_inference.py](src/main_inference.py) o en el script de ejemplo para acelerar.
 - Puedes ajustar el número de frames por sector editando `frames_per_sector` en [scripts/run_example_with_plots.py](scripts/run_example_with_plots.py).
-  - El simulador ahora usa longitudes de tramo, banking y dificultad del circuito Aspar para estimar tiempos y mezclar CAG/RAG de forma más realista.
-
-### Project Structure
-
+- El simulador ahora usa longitudes de tramo, banking, dificultad y perfil de aceleración del circuito Aspar para estimar tiempos y mezclar CAG/RAG de forma más realista.
+- **Mezcla CAG/RAG dinámica**: Sectors de baja dificultad (rectas) usan principalmente CAG (~100%), mientras que turns difíciles (high banking, frenadas duras) disparan RAG (~50-65%). Esto refleja la confianza del modelo en cada zona del circuito.
+- **Perfil de velocidad realista**: La velocidad evoluciona suavemente entre frames considerando throttle, braking, aceleración/frenada profiles, DRS zones, y suavizado de transiciones. Cada vuelta simulada dura ~54 segundos (cercano a tiempos reales).
 ```
 Agentic-Racing-Vision/
 ├── paper/
