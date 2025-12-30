@@ -1,32 +1,32 @@
 {
-  "total_laps": 100,
+  "total_laps": 500,
   "weather_distribution": {
-    "sunny": 50,
-    "cloudy": 33,
-    "light_rain": 15,
-    "heavy_rain": 2
+    "sunny": 264,
+    "cloudy": 142,
+    "light_rain": 73,
+    "heavy_rain": 21
   },
-  "anomaly_rate": 0.1,
+  "anomaly_rate": 0.054,
   "anomaly_type_distribution": {
-    "suspension_chatter": 3,
-    "tire_blistering": 3,
-    "brake_fade": 2,
-    "electrical_glitch": 1,
-    "oil_debris": 1
+    "tire_blistering": 8,
+    "electrical_glitch": 7,
+    "suspension_chatter": 7,
+    "brake_fade": 3,
+    "oil_debris": 2
   },
   "lap_time_statistics": {
-    "mean": 76.38588534329318,
-    "std": 2.747679258392294,
-    "min": 71.46740871733076,
-    "max": 88.59207420106733,
-    "median": 76.00969061913717
+    "mean": 76.60188687761392,
+    "std": 3.1463660050574815,
+    "min": 70.5003844920701,
+    "max": 90.76774105337664,
+    "median": 76.06258967241696
   },
   "telemetry_statistics": {
-    "total_samples": 763810,
-    "avg_samples_per_lap": 7638.1
+    "total_samples": 3829839,
+    "avg_samples_per_lap": 7659.678
   },
   "video_statistics": {
-    "total_frames": 458261,
-    "avg_frames_per_lap": 4582.61
+    "total_frames": 2297805,
+    "avg_frames_per_lap": 4595.61
   }
 }

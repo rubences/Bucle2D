@@ -1,0 +1,227 @@
+==========================================================================================
+EXPERIMENTAL VALIDATION REPORT: ASPAR-SYNTH-10K DATASET
+==========================================================================================
+
+Generation Date: 2025-12-30T14:23:21.856232
+Report Date: 2025-12-30T14:27:53.221378
+
+
+==========================================================================================
+1. DATASET OVERVIEW
+==========================================================================================
+
+📊 Basic Statistics:
+   • Dataset Name: Aspar-Synth-10K
+   • Circuit: Aspar Circuit
+   • Circuit Location: Valencia, Spain
+   • Circuit Length: 3.2 km
+   • Number of Sectors: 8
+   • Total Laps Generated: 500
+   • Total Telemetry Samples: 3,829,839
+   • Total Video Frames: 2,297,805
+
+
+==========================================================================================
+2. WEATHER CONDITIONS ANALYSIS
+==========================================================================================
+
+🌦️  Weather Distribution:
+   • sunny          :  264 laps ( 52.8%)
+   • cloudy         :  142 laps ( 28.4%)
+   • light_rain     :   73 laps ( 14.6%)
+   • heavy_rain     :   21 laps (  4.2%)
+
+⏱️  Lap Time Impact by Weather:
+   • sunny          : 74.92s ± 1.52s (min: 70.50s, max: 78.75s)
+   • cloudy         : 76.57s ± 1.48s (min: 72.61s, max: 80.41s)
+   • light_rain     : 79.66s ± 1.31s (min: 75.96s, max: 82.98s)
+   • heavy_rain     : 87.33s ± 1.54s (min: 85.20s, max: 90.77s)
+
+
+==========================================================================================
+3. ANOMALY INJECTION ANALYSIS
+==========================================================================================
+
+⚠️  Anomaly Statistics:
+   • Total Anomaly Injections: 5.40%
+   • Laps with Anomalies: 27
+
+   Anomaly Types Injected:
+      • tire_blistering          :  8 occurrences ( 29.6%)
+      • electrical_glitch        :  7 occurrences ( 25.9%)
+      • suspension_chatter       :  7 occurrences ( 25.9%)
+      • brake_fade               :  3 occurrences ( 11.1%)
+      • oil_debris               :  2 occurrences (  7.4%)
+
+
+==========================================================================================
+4. TELEMETRY SPECIFICATIONS
+==========================================================================================
+
+📡 Telemetry Configuration:
+   • Sampling Rate: 100 Hz
+   • Total Channels: 22
+   • Average Samples per Lap: 7660
+   • Total Samples Collected: 3,829,839
+
+
+==========================================================================================
+5. VIDEO SPECIFICATIONS
+==========================================================================================
+
+🎥 Video Configuration:
+   • Resolution: 3840x2160 (4K UHD)
+   • Frame Rate: 60 FPS
+   • Codec: H.265/HEVC
+   • Total Frames Generated: 2,297,805
+   • Average Frames per Lap: 4596
+
+
+==========================================================================================
+6. LAP TIME STATISTICS
+==========================================================================================
+
+⏱️  Lap Time Distribution:
+   • Mean Lap Time: 76.60 seconds
+   • Median Lap Time: 76.06 seconds
+   • Standard Deviation: 3.15 seconds
+   • Minimum Lap Time: 70.50 seconds
+   • Maximum Lap Time: 90.77 seconds
+   • Range: 20.27 seconds
+
+
+==========================================================================================
+7. ASPAR CIRCUIT SECTORS
+==========================================================================================
+
+🏁 Sector Configuration:
+
+   Sector 1: Main Straight
+      • Length: 600 m
+      • Avg Speed: 240 km/h
+      • Max Lean: 5°
+      • Type: straight
+
+   Sector 2: Turn 1 Braking
+      • Length: 180 m
+      • Avg Speed: 95 km/h
+      • Max Lean: 45°
+      • Type: heavy_braking
+
+   Sector 3: Turn 2 Apex
+      • Length: 220 m
+      • Avg Speed: 120 km/h
+      • Max Lean: 62°
+      • Type: technical
+
+   Sector 4: Turn 4 Banking
+      • Length: 450 m
+      • Avg Speed: 210 km/h
+      • Max Lean: 48°
+      • Type: fast_corner
+
+   Sector 5: Secondary Straight
+      • Length: 500 m
+      • Avg Speed: 230 km/h
+      • Max Lean: 8°
+      • Type: straight
+
+   Sector 6: Turn 6 Tight
+      • Length: 150 m
+      • Avg Speed: 85 km/h
+      • Max Lean: 64°
+      • Type: hairpin
+
+   Sector 7: Turn 8 Banking
+      • Length: 400 m
+      • Avg Speed: 190 km/h
+      • Max Lean: 50°
+      • Type: fast_corner
+
+   Sector 8: Final Straight
+      • Length: 700 m
+      • Avg Speed: 260 km/h
+      • Max Lean: 3°
+      • Type: straight
+
+
+==========================================================================================
+8. TEST SCENARIOS FOR HYPOTHESIS VALIDATION
+==========================================================================================
+
+✅ Scenario A: Qualifying Lap (Baseline - H1 Validation)
+   • Condition: Ideal track, sunny weather
+   • Laps Available: 264
+   • Avg Lap Time: 74.92s
+   • Anomalies: 15 (should be minimal)
+   • Purpose: Validate H1 (Latency Optimization with CAG)
+
+⚠️  Scenario B: Mechanical Stress (Anomaly - H2 Validation)
+   • Condition: Anomalies injected (suspension, tires, brakes)
+   • Laps Available: 27
+   • Anomaly Types: 5
+   • Purpose: Validate H2 (Diagnostic Precision with RAG)
+
+🌧️  Scenario C: Environmental Shift (Edge Case - H3 Validation)
+   • Condition: Changing weather (rain, lighting shifts)
+   • Laps Available: 94
+   • Avg Lap Time: 81.37s (vs sunny: 74.92s)
+   • Time Penalty: 6.45s
+   • Purpose: Validate H3 (Energy Viability with adaptive switching)
+
+
+==========================================================================================
+9. DATA AVAILABILITY FOR EXPERIMENTS
+==========================================================================================
+
+📂 Data Files Generated:
+   • dataset_metadata.json: Complete dataset metadata
+   • dataset_summary.json: Statistical summary
+   • telemetry/: 5 telemetry chunks
+   • video_metadata/: 500 video files
+   • visualizations/: 4 analysis plots generated
+
+
+==========================================================================================
+10. HYPOTHESIS VALIDATION STATUS
+==========================================================================================
+
+✅ H1 (Latency Optimization)
+   Status: DATA READY FOR VALIDATION
+   Expected: ≥40% latency reduction with CAG
+   Dataset: 264 sunny laps for clean CAG testing
+   Target: L_total < 50ms (safety critical)
+
+✅ H2 (Diagnostic Precision)
+   Status: DATA READY FOR VALIDATION
+   Expected: >15% F1-score improvement with RAG
+   Dataset: 27 anomalies across 5 types
+   Target: Superior detection of mechanical failures
+
+✅ H3 (Energy Viability)
+   Status: DATA READY FOR VALIDATION
+   Expected: <50W thermal envelope
+   Dataset: Weather progression (294 laps) for adaptive testing
+   Target: 35% energy reduction vs Always-On RAG
+
+
+==========================================================================================
+SUMMARY
+==========================================================================================
+
+✅ EXPERIMENTAL SETUP COMPLETE
+
+• Dataset Size: 500 laps
+• Total Telemetry: 3,829,839 samples @ 100Hz
+• Total Video: 2,297,805 frames @ 4K 60FPS
+• Anomalies: 5.40% injection rate (27 laps)
+• Weather: 4 conditions with realistic distributions
+
+✅ READY FOR:
+   1. H1 Validation (Latency Optimization)
+   2. H2 Validation (Diagnostic Precision)
+   3. H3 Validation (Energy Viability)
+
+📁 Location: /workspaces/Bucle2D/data/aspar_synth_10k/
+
+==========================================================================================
