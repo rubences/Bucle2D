@@ -1243,7 +1243,7 @@
       "sector_name": "Straight_Secondary",
       "duration_s": 7.356521739130435,
       "frames_processed": 30,
-      "avg_speed_kmh": 223.64091737170918,
+      "avg_speed_kmh": 223.60920599356163,
       "telemetry": [
         {
           "frame": 0,
@@ -1388,7 +1388,7 @@
         {
           "frame": 14,
           "timestamp": 28.947705132396216,
-          "speed_kmh": 229.53893740159617,
+          "speed_kmh": 229.38734766984902,
           "lean_angle": 8.0,
           "throttle": 0.95,
           "confidence": 1.0,
@@ -1398,7 +1398,7 @@
         {
           "frame": 15,
           "timestamp": 29.192922523700563,
-          "speed_kmh": 229.08250872325684,
+          "speed_kmh": 228.9688164244465,
           "lean_angle": 8.0,
           "throttle": 0.95,
           "confidence": 1.0,
@@ -1408,7 +1408,7 @@
         {
           "frame": 16,
           "timestamp": 29.43813991500491,
-          "speed_kmh": 230.3275071621585,
+          "speed_kmh": 230.24223793805075,
           "lean_angle": 8.0,
           "throttle": 0.95,
           "confidence": 1.0,
@@ -1418,7 +1418,7 @@
         {
           "frame": 17,
           "timestamp": 29.683357306309258,
-          "speed_kmh": 228.83878451803324,
+          "speed_kmh": 228.73433443277014,
           "lean_angle": 8.0,
           "throttle": 0.95,
           "confidence": 1.0,
@@ -1428,7 +1428,7 @@
         {
           "frame": 18,
           "timestamp": 29.928574697613605,
-          "speed_kmh": 227.49245443094662,
+          "speed_kmh": 227.4141168669993,
           "lean_angle": 8.0,
           "throttle": 0.95,
           "confidence": 0.9791742529133503,
@@ -1438,7 +1438,7 @@
         {
           "frame": 19,
           "timestamp": 30.173792088917953,
-          "speed_kmh": 226.71752434690742,
+          "speed_kmh": 226.65877117394695,
           "lean_angle": 8.0,
           "throttle": 0.95,
           "confidence": 1.0,
@@ -1448,7 +1448,7 @@
         {
           "frame": 20,
           "timestamp": 30.4190094802223,
-          "speed_kmh": 226.92804625681705,
+          "speed_kmh": 226.88398137709672,
           "lean_angle": 8.0,
           "throttle": 0.95,
           "confidence": 1.0,
@@ -1458,7 +1458,7 @@
         {
           "frame": 21,
           "timestamp": 30.664226871526647,
-          "speed_kmh": 228.01080805192282,
+          "speed_kmh": 227.97775939213258,
           "lean_angle": 8.0,
           "throttle": 0.95,
           "confidence": 0.9964028914757939,
@@ -1468,7 +1468,7 @@
         {
           "frame": 22,
           "timestamp": 30.909444262830995,
-          "speed_kmh": 227.57997841986386,
+          "speed_kmh": 227.5551919250212,
           "lean_angle": 8.0,
           "throttle": 0.95,
           "confidence": 1.0,
@@ -1478,7 +1478,7 @@
         {
           "frame": 23,
           "timestamp": 31.154661654135342,
-          "speed_kmh": 228.18389996455588,
+          "speed_kmh": 228.16531009342387,
           "lean_angle": 8.0,
           "throttle": 0.95,
           "confidence": 0.9969206929942743,
@@ -1488,7 +1488,7 @@
         {
           "frame": 24,
           "timestamp": 31.39987904543969,
-          "speed_kmh": 228.42657259973424,
+          "speed_kmh": 228.41263019638524,
           "lean_angle": 8.0,
           "throttle": 0.95,
           "confidence": 0.9959560982475935,
@@ -1498,7 +1498,7 @@
         {
           "frame": 25,
           "timestamp": 31.645096436744037,
-          "speed_kmh": 225.67120638105496,
+          "speed_kmh": 225.6607495785432,
           "lean_angle": 8.0,
           "throttle": 0.95,
           "confidence": 0.9904425149168486,
@@ -1508,7 +1508,7 @@
         {
           "frame": 26,
           "timestamp": 31.890313828048384,
-          "speed_kmh": 230.50739074391933,
+          "speed_kmh": 230.4995481420355,
           "lean_angle": 8.0,
           "throttle": 0.95,
           "confidence": 1.0,
@@ -1518,27 +1518,27 @@
         {
           "frame": 27,
           "timestamp": 32.135531219352735,
-          "speed_kmh": 227.46512333661963,
+          "speed_kmh": 227.37581844824786,
           "lean_angle": 8.0,
           "throttle": 0.95,
-          "confidence": 0.9767782953364413,
+          "confidence": 0.9763231746619191,
           "tool": "CAG",
           "decision_time_ms": 1.0634799598641909
         },
         {
           "frame": 28,
           "timestamp": 32.380748610657086,
-          "speed_kmh": 229.64523769265867,
+          "speed_kmh": 229.57825902637984,
           "lean_angle": 8.0,
           "throttle": 0.95,
-          "confidence": 0.9864188336987193,
+          "confidence": 0.9863681290757774,
           "tool": "CAG",
           "decision_time_ms": 1.7855531449634308
         },
         {
           "frame": 29,
           "timestamp": 32.62596600196144,
-          "speed_kmh": 228.90869045835308,
+          "speed_kmh": 228.85845645864396,
           "lean_angle": 8.0,
           "throttle": 0.95,
           "confidence": 1.0,
@@ -1552,307 +1552,307 @@
       "sector_name": "Turn_6_Tight",
       "duration_s": 9.741176470588234,
       "frames_processed": 30,
-      "avg_speed_kmh": 67.66406647028944,
+      "avg_speed_kmh": 64.77876616055393,
       "telemetry": [
         {
           "frame": 0,
           "timestamp": 32.87118339326579,
-          "speed_kmh": 177.10406340267954,
+          "speed_kmh": 116.06356102440701,
           "lean_angle": 25.0,
-          "throttle": 0.65,
-          "confidence": 0.8839885455622235,
+          "throttle": 0.5,
+          "confidence": 0.7519393023322536,
           "tool": "RAG",
-          "decision_time_ms": 24.08640643135704
+          "decision_time_ms": 18.849047368527412
         },
         {
           "frame": 1,
           "timestamp": 33.19588927561873,
-          "speed_kmh": 139.13975476202197,
+          "speed_kmh": 86.74219540129594,
           "lean_angle": 25.0,
-          "throttle": 0.35,
-          "confidence": 0.857411528342763,
+          "throttle": 0.65,
+          "confidence": 0.8384538532766974,
           "tool": "RAG",
-          "decision_time_ms": 25.31468426399416
+          "decision_time_ms": 16.540899547466317
         },
         {
           "frame": 2,
           "timestamp": 33.52059515797168,
-          "speed_kmh": 112.41090473208999,
+          "speed_kmh": 81.99416033904703,
           "lean_angle": 25.0,
-          "throttle": 0.65,
-          "confidence": 0.8564939116736823,
+          "throttle": 0.5,
+          "confidence": 0.8125506797718995,
           "tool": "RAG",
-          "decision_time_ms": 20.2614550683031
+          "decision_time_ms": 21.69653163103541
         },
         {
           "frame": 3,
           "timestamp": 33.84530104032462,
-          "speed_kmh": 83.73179261842434,
+          "speed_kmh": 65.41589097600175,
           "lean_angle": 25.0,
           "throttle": 0.6,
-          "confidence": 0.8558937964835459,
+          "confidence": 0.8610761497764161,
           "tool": "RAG",
-          "decision_time_ms": 22.72878451445169
+          "decision_time_ms": 17.80647878258729
         },
         {
           "frame": 4,
           "timestamp": 34.170006922677565,
-          "speed_kmh": 75.5907664374312,
-          "lean_angle": 25.0,
-          "throttle": 0.5,
-          "confidence": 0.8712133660251755,
-          "tool": "RAG",
-          "decision_time_ms": 29.931263324292587
+          "speed_kmh": 55.92565476321797,
+          "lean_angle": 64.0,
+          "throttle": 0.6,
+          "confidence": 0.8947878002251671,
+          "tool": "CAG",
+          "decision_time_ms": 0.9231808635431205
         },
         {
           "frame": 5,
           "timestamp": 34.49471280503051,
-          "speed_kmh": 55.3900422806937,
-          "lean_angle": 64.0,
-          "throttle": 0.6,
-          "confidence": 0.8859272196302093,
-          "tool": "CAG",
-          "decision_time_ms": 1.1157270415567184
+          "speed_kmh": 62.5856413503116,
+          "lean_angle": 25.0,
+          "throttle": 0.65,
+          "confidence": 0.8784073253227859,
+          "tool": "RAG",
+          "decision_time_ms": 20.30217847816596
         },
         {
           "frame": 6,
           "timestamp": 34.819418687383454,
-          "speed_kmh": 49.16656688159915,
+          "speed_kmh": 65.6813107798695,
           "lean_angle": 25.0,
-          "throttle": 0.6,
-          "confidence": 0.8958746054204907,
+          "throttle": 0.5,
+          "confidence": 0.9251043552821528,
           "tool": "RAG",
-          "decision_time_ms": 21.511945857936077
+          "decision_time_ms": 19.876236984705997
         },
         {
           "frame": 7,
           "timestamp": 35.1441245697364,
-          "speed_kmh": 48.74710401492394,
-          "lean_angle": 64.0,
-          "throttle": 0.6,
-          "confidence": 0.8854099187791816,
-          "tool": "CAG",
-          "decision_time_ms": 0.786815611293777
+          "speed_kmh": 66.0865086109489,
+          "lean_angle": 25.0,
+          "throttle": 0.35,
+          "confidence": 0.8622114332004337,
+          "tool": "RAG",
+          "decision_time_ms": 26.85035626258187
         },
         {
           "frame": 8,
           "timestamp": 35.46883045208934,
-          "speed_kmh": 54.04219170390378,
+          "speed_kmh": 70.23590202348231,
           "lean_angle": 25.0,
           "throttle": 0.5,
-          "confidence": 0.8628544900305994,
+          "confidence": 0.8658933344230377,
           "tool": "RAG",
-          "decision_time_ms": 24.72937131955335
+          "decision_time_ms": 20.03336513320393
         },
         {
           "frame": 9,
           "timestamp": 35.79353633444229,
-          "speed_kmh": 59.33381116535402,
+          "speed_kmh": 71.1865336371204,
           "lean_angle": 25.0,
-          "throttle": 0.65,
-          "confidence": 0.8811796422787738,
+          "throttle": 0.5,
+          "confidence": 0.8782492411522681,
           "tool": "RAG",
-          "decision_time_ms": 16.101867238826728
+          "decision_time_ms": 15.951076713246552
         },
         {
           "frame": 10,
           "timestamp": 36.11824221679523,
-          "speed_kmh": 56.93042738089161,
-          "lean_angle": 25.0,
+          "speed_kmh": 62.92824956543735,
+          "lean_angle": 64.0,
           "throttle": 0.6,
-          "confidence": 0.8750281259754032,
-          "tool": "RAG",
-          "decision_time_ms": 17.03734016078215
+          "confidence": 0.8994509292119286,
+          "tool": "CAG",
+          "decision_time_ms": 0.9534222495729361
         },
         {
           "frame": 11,
           "timestamp": 36.442948099148175,
-          "speed_kmh": 63.32602892732471,
+          "speed_kmh": 65.18950200344753,
           "lean_angle": 25.0,
-          "throttle": 0.5,
-          "confidence": 0.8628833925492447,
+          "throttle": 0.65,
+          "confidence": 0.8748835040829563,
           "tool": "RAG",
-          "decision_time_ms": 26.498345062936185
+          "decision_time_ms": 26.680605773375994
         },
         {
           "frame": 12,
           "timestamp": 36.76765398150112,
-          "speed_kmh": 57.501211244472444,
-          "lean_angle": 64.0,
-          "throttle": 0.6,
-          "confidence": 0.8884728393652426,
-          "tool": "CAG",
-          "decision_time_ms": 1.1165538332395726
+          "speed_kmh": 68.69442743198606,
+          "lean_angle": 25.0,
+          "throttle": 0.5,
+          "confidence": 0.8622654583013043,
+          "tool": "RAG",
+          "decision_time_ms": 26.498345062936185
         },
         {
           "frame": 13,
           "timestamp": 37.092359863854064,
-          "speed_kmh": 58.46913706331977,
-          "lean_angle": 25.0,
+          "speed_kmh": 59.86330658652344,
+          "lean_angle": 64.0,
           "throttle": 0.6,
-          "confidence": 0.8987803199630183,
-          "tool": "RAG",
-          "decision_time_ms": 19.842578429669327
+          "confidence": 0.8873478770195906,
+          "tool": "CAG",
+          "decision_time_ms": 1.1165538332395726
         },
         {
           "frame": 14,
           "timestamp": 37.41706574620701,
-          "speed_kmh": 53.96373822773445,
-          "lean_angle": 64.0,
+          "speed_kmh": 59.54979568230811,
+          "lean_angle": 25.0,
           "throttle": 0.6,
-          "confidence": 0.8976019855573266,
-          "tool": "CAG",
-          "decision_time_ms": 1.6657024033195638
+          "confidence": 0.8980744130568403,
+          "tool": "RAG",
+          "decision_time_ms": 19.842578429669327
         },
         {
           "frame": 15,
           "timestamp": 37.74177162855995,
-          "speed_kmh": 59.16019873130729,
-          "lean_angle": 25.0,
-          "throttle": 0.5,
-          "confidence": 0.8831906633121912,
-          "tool": "RAG",
-          "decision_time_ms": 28.069999914264056
+          "speed_kmh": 54.439228020089324,
+          "lean_angle": 64.0,
+          "throttle": 0.6,
+          "confidence": 0.8969922113019411,
+          "tool": "CAG",
+          "decision_time_ms": 1.6657024033195638
         },
         {
           "frame": 16,
           "timestamp": 38.0664775109129,
-          "speed_kmh": 63.747559216608124,
+          "speed_kmh": 59.46926709633796,
           "lean_angle": 25.0,
-          "throttle": 0.65,
-          "confidence": 0.8558463315538463,
+          "throttle": 0.5,
+          "confidence": 0.8832230188354181,
           "tool": "RAG",
-          "decision_time_ms": 22.765358810481242
+          "decision_time_ms": 28.069999914264056
         },
         {
           "frame": 17,
           "timestamp": 38.39118339326584,
-          "speed_kmh": 61.32746257627249,
-          "lean_angle": 64.0,
-          "throttle": 0.6,
-          "confidence": 0.8862321159285131,
-          "tool": "CAG",
-          "decision_time_ms": 0.9186740462988348
+          "speed_kmh": 63.94845365387806,
+          "lean_angle": 25.0,
+          "throttle": 0.65,
+          "confidence": 0.8558637986258892,
+          "tool": "RAG",
+          "decision_time_ms": 22.765358810481242
         },
         {
           "frame": 18,
           "timestamp": 38.715889275618785,
-          "speed_kmh": 60.67548233611367,
-          "lean_angle": 25.0,
-          "throttle": 0.35,
-          "confidence": 0.8828385192631565,
-          "tool": "RAG",
-          "decision_time_ms": 21.510031180621297
+          "speed_kmh": 61.41585612867126,
+          "lean_angle": 64.0,
+          "throttle": 0.6,
+          "confidence": 0.8863173041016773,
+          "tool": "CAG",
+          "decision_time_ms": 0.9186740462988348
         },
         {
           "frame": 19,
           "timestamp": 39.04059515797173,
-          "speed_kmh": 63.59899335360823,
+          "speed_kmh": 60.73293814517287,
           "lean_angle": 25.0,
-          "throttle": 0.65,
-          "confidence": 0.8618047980051263,
+          "throttle": 0.35,
+          "confidence": 0.8829101653441477,
           "tool": "RAG",
-          "decision_time_ms": 15.60577731728408
+          "decision_time_ms": 21.510031180621297
         },
         {
           "frame": 20,
           "timestamp": 39.365301040324674,
-          "speed_kmh": 56.025175455169155,
-          "lean_angle": 64.0,
-          "throttle": 0.6,
-          "confidence": 0.8881360972189843,
-          "tool": "CAG",
-          "decision_time_ms": 0.5587312414541749
+          "speed_kmh": 63.63633962949671,
+          "lean_angle": 25.0,
+          "throttle": 0.65,
+          "confidence": 0.8618472945517278,
+          "tool": "RAG",
+          "decision_time_ms": 15.60577731728408
         },
         {
           "frame": 21,
           "timestamp": 39.69000692267762,
-          "speed_kmh": 56.36995402751987,
+          "speed_kmh": 56.04160781656008,
           "lean_angle": 64.0,
           "throttle": 0.6,
-          "confidence": 0.9018174361808475,
+          "confidence": 0.8881306458168255,
           "tool": "CAG",
-          "decision_time_ms": 1.25657594956246
+          "decision_time_ms": 0.5587312414541749
         },
         {
           "frame": 22,
           "timestamp": 40.01471280503056,
-          "speed_kmh": 52.75435074251257,
+          "speed_kmh": 56.37718426653187,
           "lean_angle": 64.0,
           "throttle": 0.6,
-          "confidence": 0.8880652246501965,
+          "confidence": 0.9018149326605043,
           "tool": "CAG",
-          "decision_time_ms": 1.5359139054107127
+          "decision_time_ms": 1.25657594956246
         },
         {
           "frame": 23,
           "timestamp": 40.33941868738351,
-          "speed_kmh": 60.480586383173296,
-          "lean_angle": 25.0,
-          "throttle": 0.92,
-          "confidence": 0.8489339126418879,
-          "tool": "RAG",
-          "decision_time_ms": 28.429220979047802
+          "speed_kmh": 52.757532047677856,
+          "lean_angle": 64.0,
+          "throttle": 0.6,
+          "confidence": 0.8880695571443366,
+          "tool": "CAG",
+          "decision_time_ms": 1.5359139054107127
         },
         {
           "frame": 24,
           "timestamp": 40.66412456973645,
-          "speed_kmh": 66.81843878518852,
+          "speed_kmh": 60.48265423153073,
           "lean_angle": 25.0,
-          "throttle": 0.5,
-          "confidence": 0.8756255758568909,
+          "throttle": 0.92,
+          "confidence": 0.8489391474523372,
           "tool": "RAG",
-          "decision_time_ms": 15.599514288137629
+          "decision_time_ms": 28.429220979047802
         },
         {
           "frame": 25,
           "timestamp": 40.988830452089395,
-          "speed_kmh": 59.436591554306744,
-          "lean_angle": 64.0,
-          "throttle": 0.6,
-          "confidence": 0.8803182871779948,
-          "tool": "CAG",
-          "decision_time_ms": 0.7277749428528281
+          "speed_kmh": 66.81978288662086,
+          "lean_angle": 25.0,
+          "throttle": 0.5,
+          "confidence": 0.87562836262423,
+          "tool": "RAG",
+          "decision_time_ms": 15.599514288137629
         },
         {
           "frame": 26,
           "timestamp": 41.31353633444234,
-          "speed_kmh": 57.27794521975548,
+          "speed_kmh": 59.43718295893698,
           "lean_angle": 64.0,
           "throttle": 0.6,
-          "confidence": 0.8806749259328097,
+          "confidence": 0.8803190983193054,
           "tool": "CAG",
-          "decision_time_ms": 1.4660348824147864
+          "decision_time_ms": 0.7277749428528281
         },
         {
           "frame": 27,
           "timestamp": 41.638242216795284,
-          "speed_kmh": 51.85346084963628,
+          "speed_kmh": 57.278205437792785,
           "lean_angle": 64.0,
           "throttle": 0.6,
-          "confidence": 0.8973000378333467,
+          "confidence": 0.8806755558886827,
           "tool": "CAG",
-          "decision_time_ms": 1.6762961187706276
+          "decision_time_ms": 1.4660348824147864
         },
         {
           "frame": 28,
           "timestamp": 41.96294809914823,
-          "speed_kmh": 60.53046255398426,
-          "lean_angle": 25.0,
-          "throttle": 0.92,
-          "confidence": 0.8888530906618977,
-          "tool": "RAG",
-          "decision_time_ms": 27.913430513553088
+          "speed_kmh": 51.85357534557269,
+          "lean_angle": 64.0,
+          "throttle": 0.6,
+          "confidence": 0.8973003330194482,
+          "tool": "CAG",
+          "decision_time_ms": 1.6762961187706276
         },
         {
           "frame": 29,
           "timestamp": 42.28765398150117,
-          "speed_kmh": 55.01779148066258,
+          "speed_kmh": 60.53053697634292,
           "lean_angle": 25.0,
-          "throttle": 0.6,
-          "confidence": 0.8821651203542583,
+          "throttle": 0.92,
+          "confidence": 0.8888536102401583,
           "tool": "RAG",
-          "decision_time_ms": 25.91749029839123
+          "decision_time_ms": 27.913430513553088
         }
       ]
     },
@@ -1861,307 +1861,307 @@
       "sector_name": "Turn_8_Banking",
       "duration_s": 6.631578947368422,
       "frames_processed": 30,
-      "avg_speed_kmh": 151.5740990695405,
+      "avg_speed_kmh": 152.20014139004272,
       "telemetry": [
         {
           "frame": 0,
           "timestamp": 42.61235986385412,
-          "speed_kmh": 92.95795369630811,
-          "lean_angle": 50.0,
+          "speed_kmh": 89.49616353228045,
+          "lean_angle": 25.0,
           "throttle": 0.6,
-          "confidence": 0.8996320206799702,
-          "tool": "CAG",
-          "decision_time_ms": 1.420903876701559
+          "confidence": 0.8882903142512814,
+          "tool": "RAG",
+          "decision_time_ms": 25.91749029839123
         },
         {
           "frame": 1,
           "timestamp": 42.833412495433066,
-          "speed_kmh": 111.94293518015925,
-          "lean_angle": 25.0,
-          "throttle": 0.35,
-          "confidence": 0.8762535172565249,
-          "tool": "RAG",
-          "decision_time_ms": 22.360544518954015
+          "speed_kmh": 115.36889552985971,
+          "lean_angle": 50.0,
+          "throttle": 0.6,
+          "confidence": 0.8997039383995333,
+          "tool": "CAG",
+          "decision_time_ms": 1.420903876701559
         },
         {
           "frame": 2,
           "timestamp": 43.054465127012016,
-          "speed_kmh": 131.31100200466557,
-          "lean_angle": 50.0,
-          "throttle": 0.6,
-          "confidence": 0.8939564887322102,
-          "tool": "CAG",
-          "decision_time_ms": 0.5686134271995724
+          "speed_kmh": 126.5100473719678,
+          "lean_angle": 25.0,
+          "throttle": 0.35,
+          "confidence": 0.8765069401791132,
+          "tool": "RAG",
+          "decision_time_ms": 22.360544518954015
         },
         {
           "frame": 3,
           "timestamp": 43.275517758590965,
-          "speed_kmh": 142.83630876427168,
+          "speed_kmh": 140.7796249293411,
           "lean_angle": 50.0,
           "throttle": 0.6,
-          "confidence": 0.8927744885290405,
+          "confidence": 0.8941587120407655,
           "tool": "CAG",
-          "decision_time_ms": 1.416378255619805
+          "decision_time_ms": 0.5686134271995724
         },
         {
           "frame": 4,
           "timestamp": 43.496570390169914,
-          "speed_kmh": 157.22334903899068,
-          "lean_angle": 25.0,
-          "throttle": 0.92,
-          "confidence": 0.8726963425034285,
-          "tool": "RAG",
-          "decision_time_ms": 29.67851217990051
+          "speed_kmh": 148.99091366531079,
+          "lean_angle": 50.0,
+          "throttle": 0.6,
+          "confidence": 0.8929503600474415,
+          "tool": "CAG",
+          "decision_time_ms": 1.416378255619805
         },
         {
           "frame": 5,
           "timestamp": 43.717623021748864,
-          "speed_kmh": 163.37369065996072,
+          "speed_kmh": 161.2238422246661,
           "lean_angle": 25.0,
-          "throttle": 0.65,
-          "confidence": 0.8722154541891497,
+          "throttle": 0.92,
+          "confidence": 0.8729039090379231,
           "tool": "RAG",
-          "decision_time_ms": 19.69653393419486
+          "decision_time_ms": 29.67851217990051
         },
         {
           "frame": 6,
           "timestamp": 43.93867565332781,
-          "speed_kmh": 163.88788363043415,
-          "lean_angle": 50.0,
-          "throttle": 0.6,
-          "confidence": 0.8971056214563737,
-          "tool": "CAG",
-          "decision_time_ms": 0.9313537787568082
+          "speed_kmh": 165.97401123064975,
+          "lean_angle": 25.0,
+          "throttle": 0.65,
+          "confidence": 0.8722291270216954,
+          "tool": "RAG",
+          "decision_time_ms": 19.69653393419486
         },
         {
           "frame": 7,
           "timestamp": 44.15972828490676,
-          "speed_kmh": 162.1859606251924,
-          "lean_angle": 25.0,
-          "throttle": 0.35,
-          "confidence": 0.8685973252159438,
-          "tool": "RAG",
-          "decision_time_ms": 17.87271183774196
+          "speed_kmh": 165.57809200138203,
+          "lean_angle": 50.0,
+          "throttle": 0.6,
+          "confidence": 0.8970984328090477,
+          "tool": "CAG",
+          "decision_time_ms": 0.9313537787568082
         },
         {
           "frame": 8,
           "timestamp": 44.38078091648571,
-          "speed_kmh": 155.79050339116128,
+          "speed_kmh": 163.2845960663085,
           "lean_angle": 25.0,
           "throttle": 0.35,
-          "confidence": 0.9077230471323045,
+          "confidence": 0.8685976460691012,
           "tool": "RAG",
-          "decision_time_ms": 15.327517144932381
+          "decision_time_ms": 17.87271183774196
         },
         {
           "frame": 9,
           "timestamp": 44.60183354806466,
-          "speed_kmh": 156.23001063233613,
+          "speed_kmh": 156.50461642788673,
           "lean_angle": 25.0,
           "throttle": 0.35,
-          "confidence": 0.8804569367650935,
+          "confidence": 0.9077217520029646,
           "tool": "RAG",
-          "decision_time_ms": 22.056769483300656
+          "decision_time_ms": 15.327517144932381
         },
         {
           "frame": 10,
           "timestamp": 44.82288617964361,
-          "speed_kmh": 158.47526433668963,
+          "speed_kmh": 156.69418410620767,
           "lean_angle": 25.0,
-          "throttle": 0.65,
-          "confidence": 0.8983651822469338,
+          "throttle": 0.35,
+          "confidence": 0.8804666679959079,
           "tool": "RAG",
-          "decision_time_ms": 15.917733852905595
+          "decision_time_ms": 22.056769483300656
         },
         {
           "frame": 11,
           "timestamp": 45.04393881122256,
-          "speed_kmh": 168.3990687629742,
+          "speed_kmh": 158.77697709470613,
           "lean_angle": 25.0,
-          "throttle": 0.92,
-          "confidence": 0.9128719515224615,
+          "throttle": 0.65,
+          "confidence": 0.8983665638543902,
           "tool": "RAG",
-          "decision_time_ms": 21.83463722528881
+          "decision_time_ms": 15.917733852905595
         },
         {
           "frame": 12,
           "timestamp": 45.26499144280151,
-          "speed_kmh": 163.74982803327558,
-          "lean_angle": 50.0,
-          "throttle": 0.6,
-          "confidence": 0.909963802002202,
-          "tool": "CAG",
-          "decision_time_ms": 0.7411304622940911
+          "speed_kmh": 168.59518205568492,
+          "lean_angle": 25.0,
+          "throttle": 0.92,
+          "confidence": 0.9128726511629465,
+          "tool": "RAG",
+          "decision_time_ms": 21.83463722528881
         },
         {
           "frame": 13,
           "timestamp": 45.48604407438046,
-          "speed_kmh": 167.48252173977278,
-          "lean_angle": 25.0,
-          "throttle": 0.5,
-          "confidence": 0.8656514455969011,
-          "tool": "RAG",
-          "decision_time_ms": 26.72863003318252
+          "speed_kmh": 163.87730167353754,
+          "lean_angle": 50.0,
+          "throttle": 0.6,
+          "confidence": 0.9099642844781465,
+          "tool": "CAG",
+          "decision_time_ms": 0.7411304622940911
         },
         {
           "frame": 14,
           "timestamp": 45.70709670595941,
-          "speed_kmh": 166.53153805936967,
-          "lean_angle": 50.0,
-          "throttle": 0.6,
-          "confidence": 0.8885328709761754,
-          "tool": "CAG",
-          "decision_time_ms": 1.4057646812492541
+          "speed_kmh": 167.56537960594306,
+          "lean_angle": 25.0,
+          "throttle": 0.5,
+          "confidence": 0.865652513142823,
+          "tool": "RAG",
+          "decision_time_ms": 26.72863003318252
         },
         {
           "frame": 15,
           "timestamp": 45.92814933753836,
-          "speed_kmh": 138.7575306130351,
-          "lean_angle": 25.0,
+          "speed_kmh": 166.58539567238034,
+          "lean_angle": 50.0,
           "throttle": 0.6,
-          "confidence": 0.8662100690241146,
-          "tool": "RAG",
-          "decision_time_ms": 21.835634545725522
+          "confidence": 0.8885332978829801,
+          "tool": "CAG",
+          "decision_time_ms": 1.4057646812492541
         },
         {
           "frame": 16,
           "timestamp": 46.14920196911731,
-          "speed_kmh": 151.62825848083838,
-          "lean_angle": 50.0,
+          "speed_kmh": 138.7821704709875,
+          "lean_angle": 25.0,
           "throttle": 0.6,
-          "confidence": 0.9304781814730615,
-          "tool": "CAG",
-          "decision_time_ms": 0.8139093423035828
+          "confidence": 0.866210104272854,
+          "tool": "RAG",
+          "decision_time_ms": 21.835634545725522
         },
         {
           "frame": 17,
           "timestamp": 46.370254600696256,
-          "speed_kmh": 153.84848558545963,
+          "speed_kmh": 151.64427438850745,
           "lean_angle": 50.0,
           "throttle": 0.6,
-          "confidence": 0.9286589219790446,
+          "confidence": 0.9304781760278338,
           "tool": "CAG",
-          "decision_time_ms": 1.642834585138447
+          "decision_time_ms": 0.8139093423035828
         },
         {
           "frame": 18,
           "timestamp": 46.591307232275206,
-          "speed_kmh": 157.84420592231055,
-          "lean_angle": 25.0,
-          "throttle": 0.65,
-          "confidence": 0.8810358392952388,
-          "tool": "RAG",
-          "decision_time_ms": 28.67277320715475
+          "speed_kmh": 153.85889592544453,
+          "lean_angle": 50.0,
+          "throttle": 0.6,
+          "confidence": 0.9286589753069101,
+          "tool": "CAG",
+          "decision_time_ms": 1.642834585138447
         },
         {
           "frame": 19,
           "timestamp": 46.812359863854155,
-          "speed_kmh": 161.89483396973688,
-          "lean_angle": 50.0,
-          "throttle": 0.6,
-          "confidence": 0.9168366217372971,
-          "tool": "CAG",
-          "decision_time_ms": 1.066349280133913
+          "speed_kmh": 157.85097264330074,
+          "lean_angle": 25.0,
+          "throttle": 0.65,
+          "confidence": 0.8810359123190125,
+          "tool": "RAG",
+          "decision_time_ms": 28.67277320715475
         },
         {
           "frame": 20,
           "timestamp": 47.033412495433105,
-          "speed_kmh": 162.4305108038156,
+          "speed_kmh": 161.8992323383805,
           "lean_angle": 50.0,
           "throttle": 0.6,
-          "confidence": 0.911179167058729,
+          "confidence": 0.9168366344703276,
           "tool": "CAG",
-          "decision_time_ms": 0.5351529099058832
+          "decision_time_ms": 1.066349280133913
         },
         {
           "frame": 21,
           "timestamp": 47.254465127012054,
-          "speed_kmh": 156.71240713501015,
-          "lean_angle": 25.0,
-          "throttle": 0.35,
-          "confidence": 0.876738396744283,
-          "tool": "RAG",
-          "decision_time_ms": 20.482300523445435
+          "speed_kmh": 162.43336974343396,
+          "lean_angle": 50.0,
+          "throttle": 0.6,
+          "confidence": 0.9111791711458884,
+          "tool": "CAG",
+          "decision_time_ms": 0.5351529099058832
         },
         {
           "frame": 22,
           "timestamp": 47.475517758591,
-          "speed_kmh": 132.65356489683614,
+          "speed_kmh": 156.71426544576207,
           "lean_angle": 25.0,
-          "throttle": 0.6,
-          "confidence": 0.8535765344236584,
+          "throttle": 0.35,
+          "confidence": 0.8767384022673619,
           "tool": "RAG",
-          "decision_time_ms": 25.872001784771015
+          "decision_time_ms": 20.482300523445435
         },
         {
           "frame": 23,
           "timestamp": 47.69657039016995,
-          "speed_kmh": 143.49314409214696,
+          "speed_kmh": 132.65441507400513,
           "lean_angle": 25.0,
-          "throttle": 0.65,
-          "confidence": 0.8984328535659495,
+          "throttle": 0.6,
+          "confidence": 0.853576534877537,
           "tool": "RAG",
-          "decision_time_ms": 27.073147643836165
+          "decision_time_ms": 25.872001784771015
         },
         {
           "frame": 24,
           "timestamp": 47.9176230217489,
-          "speed_kmh": 149.05112494313104,
-          "lean_angle": 50.0,
-          "throttle": 0.6,
-          "confidence": 0.9016337623330349,
-          "tool": "CAG",
-          "decision_time_ms": 1.8144555857254008
+          "speed_kmh": 143.4936967073068,
+          "lean_angle": 25.0,
+          "throttle": 0.65,
+          "confidence": 0.8984328538544019,
+          "tool": "RAG",
+          "decision_time_ms": 27.073147643836165
         },
         {
           "frame": 25,
           "timestamp": 48.13867565332785,
-          "speed_kmh": 152.8304008600288,
+          "speed_kmh": 149.05148414298495,
           "lean_angle": 50.0,
           "throttle": 0.6,
-          "confidence": 0.8934198190914833,
+          "confidence": 0.9016337615382694,
           "tool": "CAG",
-          "decision_time_ms": 1.4462481318811415
+          "decision_time_ms": 1.8144555857254008
         },
         {
           "frame": 26,
           "timestamp": 48.3597282849068,
-          "speed_kmh": 164.22607349151735,
-          "lean_angle": 25.0,
-          "throttle": 0.92,
-          "confidence": 0.8552654644078097,
-          "tool": "RAG",
-          "decision_time_ms": 25.027592505991667
+          "speed_kmh": 152.83063433993382,
+          "lean_angle": 50.0,
+          "throttle": 0.6,
+          "confidence": 0.8934198190737926,
+          "tool": "CAG",
+          "decision_time_ms": 1.4462481318811415
         },
         {
           "frame": 27,
           "timestamp": 48.58078091648575,
-          "speed_kmh": 166.7957394525096,
-          "lean_angle": 50.0,
-          "throttle": 0.6,
-          "confidence": 0.9026057547514148,
-          "tool": "CAG",
-          "decision_time_ms": 1.8921915868831345
+          "speed_kmh": 164.22622525345562,
+          "lean_angle": 25.0,
+          "throttle": 0.92,
+          "confidence": 0.8552654646373457,
+          "tool": "RAG",
+          "decision_time_ms": 25.027592505991667
         },
         {
           "frame": 28,
           "timestamp": 48.8018335480647,
-          "speed_kmh": 157.9634798224772,
-          "lean_angle": 25.0,
-          "throttle": 0.35,
-          "confidence": 0.862034964411647,
-          "tool": "RAG",
-          "decision_time_ms": 21.20620356859868
+          "speed_kmh": 166.79583809776946,
+          "lean_angle": 50.0,
+          "throttle": 0.6,
+          "confidence": 0.9026057548350037,
+          "tool": "CAG",
+          "decision_time_ms": 1.8921915868831345
         },
         {
           "frame": 29,
           "timestamp": 49.02288617964365,
-          "speed_kmh": 134.71539346180066,
+          "speed_kmh": 157.96354394189612,
           "lean_angle": 25.0,
-          "throttle": 0.6,
-          "confidence": 0.8634076812899281,
+          "throttle": 0.35,
+          "confidence": 0.862034964457963,
           "tool": "RAG",
-          "decision_time_ms": 25.529140819393177
+          "decision_time_ms": 21.20620356859868
         }
       ]
     },
@@ -2170,12 +2170,32 @@
       "sector_name": "Final_Straight",
       "duration_s": 4.846153846153848,
       "frames_processed": 30,
-      "avg_speed_kmh": 265.17632231145666,
+      "avg_speed_kmh": 262.62991892607386,
       "telemetry": [
         {
           "frame": 0,
           "timestamp": 49.2439388112226,
-          "speed_kmh": 170.4067819526042,
+          "speed_kmh": 188.3934924857325,
+          "lean_angle": 3.0,
+          "throttle": 1.0,
+          "confidence": 0.9682326813512696,
+          "tool": "CAG",
+          "decision_time_ms": 1.5529140819393177
+        },
+        {
+          "frame": 1,
+          "timestamp": 49.40547727276106,
+          "speed_kmh": 210.05692019721695,
+          "lean_angle": 3.0,
+          "throttle": 1.0,
+          "confidence": 0.9903562394914518,
+          "tool": "CAG",
+          "decision_time_ms": 0.8032132403357777
+        },
+        {
+          "frame": 2,
+          "timestamp": 49.567015734299524,
+          "speed_kmh": 226.91292700416645,
           "lean_angle": 3.0,
           "throttle": 1.0,
           "confidence": 1.0,
@@ -2183,19 +2203,19 @@
           "decision_time_ms": 1.1117684814522553
         },
         {
-          "frame": 1,
-          "timestamp": 49.40547727276106,
-          "speed_kmh": 197.0111435110903,
+          "frame": 3,
+          "timestamp": 49.72855419583799,
+          "speed_kmh": 239.390752299762,
           "lean_angle": 3.0,
           "throttle": 1.0,
-          "confidence": 0.9752627078705267,
+          "confidence": 0.9755025852777403,
           "tool": "CAG",
           "decision_time_ms": 0.8657630381669268
         },
         {
-          "frame": 2,
-          "timestamp": 49.567015734299524,
-          "speed_kmh": 214.3703165665773,
+          "frame": 4,
+          "timestamp": 49.89009265737645,
+          "speed_kmh": 246.15502315808106,
           "lean_angle": 3.0,
           "throttle": 1.0,
           "confidence": 1.0,
@@ -2203,9 +2223,9 @@
           "decision_time_ms": 0.6861222526402617
         },
         {
-          "frame": 3,
-          "timestamp": 49.72855419583799,
-          "speed_kmh": 232.4187075675014,
+          "frame": 5,
+          "timestamp": 50.05163111891491,
+          "speed_kmh": 256.25723751112923,
           "lean_angle": 3.0,
           "throttle": 1.0,
           "confidence": 1.0,
@@ -2213,9 +2233,9 @@
           "decision_time_ms": 1.4913353638649536
         },
         {
-          "frame": 4,
-          "timestamp": 49.89009265737645,
-          "speed_kmh": 244.55362191823298,
+          "frame": 6,
+          "timestamp": 50.213169580453375,
+          "speed_kmh": 262.4325193759538,
           "lean_angle": 3.0,
           "throttle": 1.0,
           "confidence": 1.0,
@@ -2223,19 +2243,19 @@
           "decision_time_ms": 1.462385661873276
         },
         {
-          "frame": 5,
-          "timestamp": 50.05163111891491,
-          "speed_kmh": 254.11385660933684,
+          "frame": 7,
+          "timestamp": 50.37470804199184,
+          "speed_kmh": 267.1138525974448,
           "lean_angle": 3.0,
           "throttle": 1.0,
-          "confidence": 1.0,
+          "confidence": 0.9993922937445668,
           "tool": "CAG",
           "decision_time_ms": 1.1541653252776392
         },
         {
-          "frame": 6,
-          "timestamp": 50.213169580453375,
-          "speed_kmh": 258.98693223120404,
+          "frame": 8,
+          "timestamp": 50.5362465035303,
+          "speed_kmh": 267.56127091256747,
           "lean_angle": 3.0,
           "throttle": 1.0,
           "confidence": 1.0,
@@ -2243,19 +2263,19 @@
           "decision_time_ms": 1.07908369710376
         },
         {
-          "frame": 7,
-          "timestamp": 50.37470804199184,
-          "speed_kmh": 263.8651731677906,
+          "frame": 9,
+          "timestamp": 50.69778496506876,
+          "speed_kmh": 269.04841666223865,
           "lean_angle": 3.0,
           "throttle": 1.0,
-          "confidence": 0.9926291694518714,
+          "confidence": 0.9866216530234946,
           "tool": "CAG",
           "decision_time_ms": 1.3079908194841066
         },
         {
-          "frame": 8,
-          "timestamp": 50.5362465035303,
-          "speed_kmh": 268.2859979127021,
+          "frame": 10,
+          "timestamp": 50.859323426607226,
+          "speed_kmh": 270.6888122074583,
           "lean_angle": 3.0,
           "throttle": 1.0,
           "confidence": 1.0,
@@ -2263,59 +2283,59 @@
           "decision_time_ms": 1.254263085284388
         },
         {
-          "frame": 9,
-          "timestamp": 50.69778496506876,
-          "speed_kmh": 270.33511264004136,
+          "frame": 11,
+          "timestamp": 51.02086188814569,
+          "speed_kmh": 270.3940852124744,
           "lean_angle": 3.0,
           "throttle": 1.0,
-          "confidence": 0.9857332662423708,
+          "confidence": 0.9767366601424953,
           "tool": "CAG",
           "decision_time_ms": 1.6558811137092453
         },
         {
-          "frame": 10,
-          "timestamp": 50.859323426607226,
-          "speed_kmh": 273.9824911335486,
+          "frame": 12,
+          "timestamp": 51.18240034968415,
+          "speed_kmh": 272.329799061549,
           "lean_angle": 3.0,
           "throttle": 1.0,
-          "confidence": 0.9749308225622955,
+          "confidence": 0.9657537502300984,
           "tool": "CAG",
           "decision_time_ms": 1.9536214864530357
         },
         {
-          "frame": 11,
-          "timestamp": 51.02086188814569,
-          "speed_kmh": 276.4598854059649,
+          "frame": 13,
+          "timestamp": 51.343938811222614,
+          "speed_kmh": 273.221731297599,
           "lean_angle": 3.0,
           "throttle": 1.0,
-          "confidence": 1.0,
+          "confidence": 0.9946340863400812,
           "tool": "CAG",
           "decision_time_ms": 1.0147047024751694
         },
         {
-          "frame": 12,
-          "timestamp": 51.18240034968415,
-          "speed_kmh": 276.4258886278428,
+          "frame": 14,
+          "timestamp": 51.50547727276108,
+          "speed_kmh": 271.86033134292325,
           "lean_angle": 3.0,
           "throttle": 1.0,
-          "confidence": 0.9938563305966099,
+          "confidence": 0.9828443572183335,
           "tool": "CAG",
           "decision_time_ms": 1.0650947902187338
         },
         {
-          "frame": 13,
-          "timestamp": 51.343938811222614,
-          "speed_kmh": 278.5015630194121,
+          "frame": 15,
+          "timestamp": 51.66701573429954,
+          "speed_kmh": 273.151539781991,
           "lean_angle": 3.0,
           "throttle": 1.0,
-          "confidence": 0.9741923876295422,
+          "confidence": 0.9642068407855326,
           "tool": "CAG",
           "decision_time_ms": 1.5170160570316884
         },
         {
-          "frame": 14,
-          "timestamp": 51.50547727276108,
-          "speed_kmh": 278.95931336079866,
+          "frame": 16,
+          "timestamp": 51.828554195838,
+          "speed_kmh": 272.8209027984198,
           "lean_angle": 3.0,
           "throttle": 1.0,
           "confidence": 1.0,
@@ -2323,29 +2343,29 @@
           "decision_time_ms": 1.6957548165567913
         },
         {
-          "frame": 15,
-          "timestamp": 51.66701573429954,
-          "speed_kmh": 277.1839581140511,
+          "frame": 17,
+          "timestamp": 51.990092657376465,
+          "speed_kmh": 270.50564926723376,
           "lean_angle": 3.0,
           "throttle": 1.0,
-          "confidence": 1.0,
+          "confidence": 0.9924987851437564,
           "tool": "CAG",
           "decision_time_ms": 1.4796901240282385
         },
         {
-          "frame": 16,
-          "timestamp": 51.828554195838,
-          "speed_kmh": 279.45785653565304,
+          "frame": 18,
+          "timestamp": 52.15163111891493,
+          "speed_kmh": 272.7346970019953,
           "lean_angle": 3.0,
           "throttle": 1.0,
-          "confidence": 1.0,
+          "confidence": 0.9953518472454075,
           "tool": "CAG",
           "decision_time_ms": 0.7110713263138464
         },
         {
-          "frame": 17,
-          "timestamp": 51.990092657376465,
-          "speed_kmh": 277.0817684470438,
+          "frame": 19,
+          "timestamp": 52.31316958045339,
+          "speed_kmh": 269.9781952018591,
           "lean_angle": 3.0,
           "throttle": 1.0,
           "confidence": 1.0,
@@ -2353,59 +2373,59 @@
           "decision_time_ms": 1.8679135615904987
         },
         {
-          "frame": 18,
-          "timestamp": 52.15163111891493,
-          "speed_kmh": 279.14835772319117,
+          "frame": 20,
+          "timestamp": 52.47470804199185,
+          "speed_kmh": 272.18914437423905,
           "lean_angle": 3.0,
           "throttle": 1.0,
-          "confidence": 0.991100588534671,
+          "confidence": 0.9824126403734657,
           "tool": "CAG",
           "decision_time_ms": 1.7460099645806877
         },
         {
-          "frame": 19,
-          "timestamp": 52.31316958045339,
-          "speed_kmh": 280.99580273287114,
+          "frame": 21,
+          "timestamp": 52.636246503530316,
+          "speed_kmh": 273.79953648242684,
           "lean_angle": 3.0,
           "throttle": 1.0,
-          "confidence": 0.937525552089306,
+          "confidence": 0.9272435159888751,
           "tool": "CAG",
           "decision_time_ms": 1.0263307053815902
         },
         {
-          "frame": 20,
-          "timestamp": 52.47470804199185,
-          "speed_kmh": 283.6060670001657,
+          "frame": 22,
+          "timestamp": 52.79778496506878,
+          "speed_kmh": 275.98030832846405,
           "lean_angle": 3.0,
           "throttle": 1.0,
-          "confidence": 1.0,
+          "confidence": 0.9998587151420079,
           "tool": "CAG",
           "decision_time_ms": 1.0619957533068283
         },
         {
-          "frame": 21,
-          "timestamp": 52.636246503530316,
-          "speed_kmh": 285.0103387276292,
+          "frame": 23,
+          "timestamp": 52.95932342660724,
+          "speed_kmh": 276.7061195894261,
           "lean_angle": 3.0,
           "throttle": 1.0,
-          "confidence": 0.9803492530199557,
+          "confidence": 0.9672069132115461,
           "tool": "CAG",
           "decision_time_ms": 1.3765809415241217
         },
         {
-          "frame": 22,
-          "timestamp": 52.79778496506878,
-          "speed_kmh": 283.1776098107004,
+          "frame": 24,
+          "timestamp": 53.120861888145704,
+          "speed_kmh": 274.24231486161625,
           "lean_angle": 3.0,
           "throttle": 1.0,
-          "confidence": 0.9746146907151209,
+          "confidence": 0.9608288852185375,
           "tool": "CAG",
           "decision_time_ms": 0.7417915634854406
         },
         {
-          "frame": 23,
-          "timestamp": 52.95932342660724,
-          "speed_kmh": 283.241221795817,
+          "frame": 25,
+          "timestamp": 53.28240034968417,
+          "speed_kmh": 274.24018377731795,
           "lean_angle": 3.0,
           "throttle": 1.0,
           "confidence": 1.0,
@@ -2413,29 +2433,29 @@
           "decision_time_ms": 1.2026944467481542
         },
         {
-          "frame": 24,
-          "timestamp": 53.120861888145704,
-          "speed_kmh": 280.05985812962365,
+          "frame": 26,
+          "timestamp": 53.44393881122263,
+          "speed_kmh": 271.0098562226372,
           "lean_angle": 3.0,
           "throttle": 1.0,
-          "confidence": 0.9696309268223771,
+          "confidence": 0.9574284898801727,
           "tool": "CAG",
           "decision_time_ms": 1.3964709448115136
         },
         {
-          "frame": 25,
-          "timestamp": 53.28240034968417,
-          "speed_kmh": 280.6435016860206,
+          "frame": 27,
+          "timestamp": 53.60547727276109,
+          "speed_kmh": 272.0626330297621,
           "lean_angle": 3.0,
           "throttle": 1.0,
-          "confidence": 0.9857213590790154,
+          "confidence": 0.9753423769428243,
           "tool": "CAG",
           "decision_time_ms": 1.512215122392467
         },
         {
-          "frame": 26,
-          "timestamp": 53.44393881122263,
-          "speed_kmh": 277.06239811000665,
+          "frame": 28,
+          "timestamp": 53.767015734299555,
+          "speed_kmh": 268.66949849152974,
           "lean_angle": 3.0,
           "throttle": 1.0,
           "confidence": 1.0,
@@ -2443,34 +2463,14 @@
           "decision_time_ms": 1.7826760647301183
         },
         {
-          "frame": 27,
-          "timestamp": 53.60547727276109,
-          "speed_kmh": 276.708945464172,
-          "lean_angle": 3.0,
-          "throttle": 1.0,
-          "confidence": 1.0,
-          "tool": "CAG",
-          "decision_time_ms": 0.5574626746771949
-        },
-        {
-          "frame": 28,
-          "timestamp": 53.767015734299555,
-          "speed_kmh": 274.82427151731633,
-          "lean_angle": 3.0,
-          "throttle": 1.0,
-          "confidence": 1.0,
-          "tool": "CAG",
-          "decision_time_ms": 1.4882370101790277
-        },
-        {
           "frame": 29,
           "timestamp": 53.92855419583802,
-          "speed_kmh": 278.4109279247908,
+          "speed_kmh": 268.9898172470001,
           "lean_angle": 3.0,
           "throttle": 1.0,
-          "confidence": 0.9763124491276193,
+          "confidence": 0.9963879218309808,
           "tool": "CAG",
-          "decision_time_ms": 1.4990123418311938
+          "decision_time_ms": 0.5574626746771949
         }
       ]
     }
@@ -2483,7 +2483,7 @@
     "cag_usage_percent": 54.58333333333333,
     "rag_usage_percent": 45.416666666666664,
     "memory_hit_rate": 54.58333333333333,
-    "avg_decision_time_ms": 10.939028658754447,
+    "avg_decision_time_ms": 10.841934725865022,
     "latency_reduction_percent": 48.0
   }
 }
