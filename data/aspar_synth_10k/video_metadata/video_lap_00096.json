@@ -1,0 +1,12 @@
+{
+  "lap_id": 96,
+  "resolution": "3840x2160",
+  "fps": 60,
+  "duration_s": 75.91419991829532,
+  "total_frames": 4554,
+  "codec": "H.265/HEVC",
+  "bitrate_mbps": 50,
+  "filename": "aspar_lap_00096.mp4",
+  "file_size_mb": 474,
+  "checksum": "f9961e07f76d12e5d4e5e4e05ae4eb00"
+}

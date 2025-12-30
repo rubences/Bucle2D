@@ -1,0 +1,32 @@
+{
+  "total_laps": 100,
+  "weather_distribution": {
+    "sunny": 50,
+    "cloudy": 33,
+    "light_rain": 15,
+    "heavy_rain": 2
+  },
+  "anomaly_rate": 0.1,
+  "anomaly_type_distribution": {
+    "suspension_chatter": 3,
+    "tire_blistering": 3,
+    "brake_fade": 2,
+    "electrical_glitch": 1,
+    "oil_debris": 1
+  },
+  "lap_time_statistics": {
+    "mean": 76.38588534329318,
+    "std": 2.747679258392294,
+    "min": 71.46740871733076,
+    "max": 88.59207420106733,
+    "median": 76.00969061913717
+  },
+  "telemetry_statistics": {
+    "total_samples": 763810,
+    "avg_samples_per_lap": 7638.1
+  },
+  "video_statistics": {
+    "total_frames": 458261,
+    "avg_frames_per_lap": 4582.61
+  }
+}
